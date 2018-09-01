@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collecter Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/style.css" />
+</head>
+<body>
+
+    <!-- This is the title -->
+    <header class="container titleText">
+        <div class="row">
+            <h1> Crystal Collector! </h1>
+        </div>
+    </header>
+
+    <!-- This is the text below the title -->
+
+    <section class="container textBox">
+        <div class="row">
+            <div class="instructions">
+                <p>
+                    You will be given a goal at the start of the game. 
+                    Collect the crystals to earn points towards the goal without going over. 
+                    The value of each crystal is hidden until you click on it!
+                    The values of the crysals are also different each game!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- These are the blocks with the game and gems -->
+
+    <main class="container">
+        <div class="row row-1">
+            <div class="col-5 column">
+                <div id="currentGoal"></div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5 column">
+                <div id="currentWins"></div>
+                <div id="currentLosses"></div>
+            </div>
+        </div>
+        <div class="row row-2">
+            <div class="col-12">
+                <button id="gem1"></button>
+                <button id="gem2"></button>
+                <button id="gem3"></button>
+                <button id="gem4"></button>
+            </div>
+        </div>
+        <div class="row row-3">
+            <div class="col-12 column">
+                <div id="currentScore"></div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../unit-4-game/assets/javascript/rotate-plugin.js"></script>
+    <script src="../unit-4-game/assets/javascript/game.js"></script>
+</body>
+</html>

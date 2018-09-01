@@ -1,0 +1,83 @@
+/* Tag Styling */
+
+body {
+    margin: auto;
+    text-align: center; 
+}
+
+h1 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+button {
+    padding: 50px;
+    margin: 25px 50px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+ main {
+     width: 100%;
+ }
+
+/* Class Styling */
+
+.column {
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+    padding: 20px;
+    margin: 10px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.row-2 {
+    margin: 20px -15px;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+    text-align: center;
+}
+
+/* ID Styling */
+
+#gem1 {
+    background-image: url("../images/bluegem.jpeg");
+    background-size: cover;
+    border: none;
+}
+
+#gem2 {
+    background-image: url("../images/greengem.jpeg");
+    background-size: cover;
+    border: none;
+}
+
+#gem3 {
+    background-image: url("../images/yellowgem.jpeg");
+    background-size: cover;
+    border: none;
+}
+
+#gem4 {
+    background-image: url("../images/redgem.jpeg");
+    background-size: cover;
+    border: none;
+}
+
+#currentScore {
+    margin: auto;
+}
+
+#currentGoal {
+    padding: 10px auto 5px;
+    margin: auto;
+    font-size: 60px;
+}
