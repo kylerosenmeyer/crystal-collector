@@ -14,6 +14,10 @@ var cC = {
     crystal4: 0,
     score: 0,
     gameNumber: 0,
+    gameOver: false,
+
+    //This array will be used for rotating the gems later
+    position: [0,0,0,0],
     
     newGameNumber: function() {
 
@@ -21,6 +25,7 @@ var cC = {
 
         this.gameNumber = Math.floor(Math.random() * 101) + 19;
         $("#currentGoal").text("Goal: " + this.gameNumber);
+    
     },
 
     setup: function() {
@@ -57,51 +62,126 @@ var cC = {
 
         if ( this.score === this.gameNumber ) {
 
+            this.gameOver = true;
+            this.rotationReset();
             this.wins = this.wins + 1;
             $("#currentWins").text("Wins: " + this.wins);
             this.newGameNumber();
             this.crystalNumbers();
             this.score = 0;
+            
 
         } else if ( this.score >= this.gameNumber ) {
 
+            this.gameOver = true;
+            this.rotationReset();
             this.losses = this.losses + 1;
             $("#currentLosses").text("Losses: " + this.losses);
             this.newGameNumber();
             this.crystalNumbers();
             this.score = 0;
-
         }
     },
 
     // Actions for clicking one of the crystals
 
     c1: function() {
+        this.gameOver = false;
         this.score = this.score + this.crystal1;
         this.gameLogic();
         $("#currentScore").text("Your Score is: " + this.score);
-        $("#gem1").rotate({endDeg: 360, duration: 1.0, easing: "ease-in" });
+
+        //This is the portion of code that rotates the gem on click. This will always execute unless the gameLogic intervenes and sets gameOver to true.
+        if ( this.gameOver == false ) {
+            if ( $("#gem1").hasClass("gem0") == true ) {
+                $("#gem1").removeClass("gem0").addClass("gem90");
+            } else if ( $("#gem1").hasClass("gem90") == true ) {
+                $("#gem1").removeClass("gem90").addClass("gem180");
+            } else if ( $("#gem1").hasClass("gem180") == true ) {
+                $("#gem1").removeClass("gem180").addClass("gem270");
+            } else if ( $("#gem1").hasClass("gem270") == true ) {
+                $("#gem1").removeClass("gem270").addClass("gem0");
+            }
+        }
     },
 
     c2: function() {
+        this.gameOver = false;
         this.score = this.score + this.crystal2;
         this.gameLogic();
         $("#currentScore").text("Your Score is: " + this.score);
-        $("#gem2").rotate({endDeg: 360, duration: 1.0, easing: "ease-in" });
+        
+        //This is the portion of code that rotates the gem on click. This will always execute unless the gameLogic intervenes and sets gameOver to true.
+        if ( this.gameOver == false ) {
+            if ( $("#gem2").hasClass("gem0") == true ) {
+                $("#gem2").removeClass("gem0").addClass("gem90");
+            } else if ( $("#gem2").hasClass("gem90") == true ) {
+                $("#gem2").removeClass("gem90").addClass("gem180");
+            } else if ( $("#gem2").hasClass("gem180") == true ) {
+                $("#gem2").removeClass("gem180").addClass("gem270");
+            } else if ( $("#gem2").hasClass("gem270") == true ) {
+                $("#gem2").removeClass("gem270").addClass("gem0");
+            }
+        }
     },
 
     c3: function() {
+        this.gameOver = false;
         this.score = this.score + this.crystal3;
         this.gameLogic();
         $("#currentScore").text("Your Score is: " + this.score);
-        $("#gem3").rotate({endDeg: 360, duration: 1.0, easing: "ease-in" });
+
+        //This is the portion of code that rotates the gem on click. This will always execute unless the gameLogic intervenes and sets gameOver to true.
+        if ( this.gameOver == false ) {
+            if ( $("#gem3").hasClass("gem0") == true ) {
+                $("#gem3").removeClass("gem0").addClass("gem90");
+            } else if ( $("#gem3").hasClass("gem90") == true ) {
+                $("#gem3").removeClass("gem90").addClass("gem180");
+            } else if ( $("#gem3").hasClass("gem180") == true ) {
+                $("#gem3").removeClass("gem180").addClass("gem270");
+            } else if ( $("#gem3").hasClass("gem270") == true ) {
+                $("#gem3").removeClass("gem270").addClass("gem0");
+            }
+        }
     },
 
     c4: function() {
+        this.gameOver = false;
         this.score = this.score + this.crystal4;
         this.gameLogic();
         $("#currentScore").text("Your Score is: " + this.score);
-        $("#gem4").rotate({endDeg: 360, duration: 1.0, easing: "ease-in" });
+
+        //This is the portion of code that rotates the gem on click. This will always execute unless the gameLogic intervenes and sets gameOver to true.
+        if ( this.gameOver == false ) {
+            if ( $("#gem4").hasClass("gem0") == true ) {
+                $("#gem4").removeClass("gem0").addClass("gem90");
+            } else if ( $("#gem4").hasClass("gem90") == true ) {
+                $("#gem4").removeClass("gem90").addClass("gem180");
+            } else if ( $("#gem4").hasClass("gem180") == true ) {
+                $("#gem4").removeClass("gem180").addClass("gem270");
+            } else if ( $("#gem4").hasClass("gem270") == true ) {
+                $("#gem4").removeClass("gem270").addClass("gem0");
+            }
+        }
+    },
+
+    //Rotation Reset
+    rotationReset: function() {
+        if ( $("#gem1").hasClass("gem0") == false ) {
+            $("#gem1").removeClass("gem90 gem180 gem270").addClass("gem0");
+        } else { $("#gem1").removeClass("gem90").addClass("gem0") };
+
+        if ( $("#gem2").hasClass("gem0") == false ) {
+            $("#gem2").removeClass("gem90 gem180 gem270").addClass("gem0");
+        } else { $("#gem2").removeClass("gem90").addClass("gem0") };
+
+        if ( $("#gem3").hasClass("gem0") == false ) {
+            $("#gem3").removeClass("gem90 gem180 gem270").addClass("gem0");
+        } else { $("#gem3").removeClass("gem90").addClass("gem0") };
+
+        if ( $("#gem4").hasClass("gem0") == false ) {
+            $("#gem4").removeClass("gem90 gem180 gem270").addClass("gem0");
+        } else { $("#gem4").removeClass("gem90").addClass("gem0") };
     },
 
 };

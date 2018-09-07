@@ -81,3 +81,51 @@ button:focus {
     margin: auto;
     font-size: 60px;
 }
+
+/* Rotate Styling - the .js file will change class names on click to activate these transormations */
+@keyframes stage1 {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(90deg)}
+}
+
+@keyframes stage2 {
+    0% {transform: rotate(90deg)}
+    100% {transform: rotate(180deg)}
+}
+
+@keyframes stage3 {
+    0% {transform: rotate(180deg)}
+    100% {transform: rotate(270deg)}
+}
+
+@keyframes stage4 {
+    0% {transform: rotate(270deg)}
+    100% {transform: rotate(360deg)}
+}
+
+.gem90 {
+    animation-name: stage1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.gem180 {
+    animation-name: stage2;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.gem270 {
+    animation-name: stage3;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.gem0 {
+    animation-name: stage4;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
