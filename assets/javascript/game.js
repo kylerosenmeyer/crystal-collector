@@ -15,9 +15,6 @@ var cC = {
     score: 0,
     gameNumber: 0,
     gameOver: false,
-
-    //This array will be used for rotating the gems later
-    position: [0,0,0,0],
     
     newGameNumber: function() {
 

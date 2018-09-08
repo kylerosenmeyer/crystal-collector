@@ -23,6 +23,7 @@ button:focus {
 
  main {
      width: 100%;
+     margin: 0px 5%;
  }
 
 /* Class Styling */
@@ -48,27 +49,29 @@ button:focus {
 
 /* ID Styling */
 
+
+
 #gem1 {
     background-image: url("../images/bluegem.jpeg");
     background-size: cover;
-    border: none;
 }
 
 #gem2 {
     background-image: url("../images/greengem.jpeg");
     background-size: cover;
-    border: none;
 }
 
 #gem3 {
     background-image: url("../images/yellowgem.jpeg");
     background-size: cover;
-    border: none;
 }
 
 #gem4 {
     background-image: url("../images/redgem.jpeg");
     background-size: cover;
+}
+
+#gem1 #gem2 #gem3 #gem4 {
     border: none;
 }
 
